@@ -1,1 +1,4 @@
 One file path tracer.
+
+Currently only compiles if cairo is installed correctly (for creating jpegs.)
+Currently only compilation on OSX set up.
