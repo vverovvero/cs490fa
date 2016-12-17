@@ -18,8 +18,7 @@ Camera s_camera = {
 
 
 ////////////////////Lights////////////////
-//used to be 3, now 6
-Light s_lights[7] = {
+Light s_lights[3] = {
   {
     .type = OMNI,
     .point = {
@@ -72,122 +71,31 @@ Light s_lights[7] = {
       .y = 244.0f,
       .z = 98.0f
     },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
-      .x = 45.0f,
-      .y = 05.0f,
-      .z = 65.0f
-    },
-    .color = {
-      .x = 244.0f,
-      .y = 107.0f,
-      .z = 66.0f
-    },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
-      .x = 45.0f,
-      .y = 05.0f,
-      .z = 75.0f
-    },
-    .color = {
-      .x = 66.0f,
-      .y = 232.0f,
-      .z = 244.0f
-    },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
-      .x = 55.0f,
-      .y = 05.0f,
-      .z = 70.0f
-    },
-    .color = {
-      .x = 204.0f,
-      .y = 38.0f,
-      .z = 255.0f
-    },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
-      .x = 50.0f,
-      .y = 50.0f, //95
-      .z = 70.0f
-    },
-    .color = {
-      .x = 255.0f,
-      .y = 255.0f,
-      .z = 255.0f
-    },
-  },
-
+  }
 };
 
-//2, now 5
-Sphere s_spheres[5] = {
+Sphere s_spheres[2] = {
 
   {
     .point =
       {
-        .x = 65.0f,
-        .y = 70.0f,
-        .z = 100.0f
+        .x = 70.0f,
+        .y = 25.0f,
+        .z = 50.0f
         // .z = 75.0f
       },
-    .radius = 8.0f
-  },
-
-  {
-    .point =
-      {
-        .x = 85.0f,
-        .y = 70.0f,
-        .z = 10.0f
-        // .z = 75.0f
-      },
-    .radius = 10.0f
+    .radius = 25.0f
   },
 
   {
     .point =
       {
         .x = 20.0f,
-        .y = 35.0f,
-        .z = 60.0f
-        // .z = 75.0f
-      },
-    .radius = 12.0f
-  },
-
-  {
-    .point =
-      {
-        .x = 30.0f,
-        .y = 15.0f,
+        .y = 10.0f,
         .z = 50.0f
         // .z = 75.0f
       },
-    .radius = 15.0f
-  },
-
-  {
-    .point =
-      {
-        .x = 80.0f,
-        .y = 45.0f,
-        .z = 35.0f
-        // .z = 75.0f
-      },
-    .radius = 9.0f
+    .radius = 10.0f
   },
 
 };
@@ -458,36 +366,18 @@ Triangle s_triangles[12] = {
 };
 
 //originally 12 objects, now 14
-Object s_objects[17] = {
+Object s_objects[14] = {
 
   {
     .type = SPHERE,
-    .matIndex = 1,
+    .matIndex = 2,
     .object = &(s_spheres[0])
   },
 
   {
     .type = SPHERE,
-    .matIndex = 1,
+    .matIndex = 3,
     .object = &(s_spheres[1])
-  },
-
-  {
-    .type = SPHERE,
-    .matIndex = 1,
-    .object = &(s_spheres[2])
-  },
-
-  {
-    .type = SPHERE,
-    .matIndex = 1,
-    .object = &(s_spheres[3])
-  },
-
-  {
-    .type = SPHERE,
-    .matIndex = 1,
-    .object = &(s_spheres[4])
   },
 
   // Back wall
@@ -675,7 +565,7 @@ Scene s_scene = {
   .materials = s_materials,
   .objects = s_objects,
   .lights = s_lights,
-  .n_lights = 7,
+  .n_lights = 3,
   .n_materials = 6,
-  .n_objects = 17
+  .n_objects = 14
 };

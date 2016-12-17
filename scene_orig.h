@@ -3,197 +3,90 @@ Camera s_camera = {
     .point = {
         .x = 50.0f,
         .y = 50.0f,
-        // .z = 01.0f
-        .z = 150.0
+        .z = 400.0
     },
-    .fieldOfView = 60.0f, //60.0f
+    .fieldOfView = 40.0f,
     .toPoint = {
         .x = 50.0f,
-        .y = 25.0f,
+        .y = 50.0f,
         .z = 0.0f
-        // .z = 160.0f
     },
     .up = UP
 };
 
 
 ////////////////////Lights////////////////
-//used to be 3, now 6
-Light s_lights[7] = {
+Light s_lights[3] = {
   {
     .type = OMNI,
     .point = {
       .x = 50.0f,
-      .y = 95.0f, //95
+      .y = 95.0f,
       .z = 50.0f
     },
     .color = {
-      .x = 255.0f,
-      .y = 255.0f,
-      .z = 255.0f
+      .x = 155.0f,
+      .y = 155.0f,
+      .z = 155.0f
     },
   },
 
   {
     .type = OMNI,
     .point = {
-      // .x = 5.0f,
-      // .y = 95.0f,
-      // .z = 100.0f
-      .x = 40.0f,
+      .x = 5.0f,
       .y = 95.0f,
-      .z = 20.0f
+      .z = 100.0f
     },
     .color = {
-      // .x = 255.0f,
-      // .y = 220.0f,
-      // .z = 200.0f
       .x = 255.0f,
-      .y = 114.0f,
-      .z = 168.0f
+      .y = 220.0f,
+      .z = 200.0f
     },
   },
 
   {
     .type = OMNI,
     .point = {
-      // .x = 95.0f,
-      // .y = 5.0f,
-      // .z = 100.0f
-      .x = 45.0f,
-      .y = 05.0f,
-      .z = 70.0f
+      .x = 95.0f,
+      .y = 5.0f,
+      .z = 100.0f
     },
     .color = {
-      // .x = 50.0f,
-      // .y = 50.0f,
-      // .z = 100.0f
-      .x = 66.0f,
-      .y = 244.0f,
-      .z = 98.0f
-    },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
-      .x = 45.0f,
-      .y = 05.0f,
-      .z = 65.0f
-    },
-    .color = {
-      .x = 244.0f,
-      .y = 107.0f,
-      .z = 66.0f
-    },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
-      .x = 45.0f,
-      .y = 05.0f,
-      .z = 75.0f
-    },
-    .color = {
-      .x = 66.0f,
-      .y = 232.0f,
-      .z = 244.0f
-    },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
-      .x = 55.0f,
-      .y = 05.0f,
-      .z = 70.0f
-    },
-    .color = {
-      .x = 204.0f,
-      .y = 38.0f,
-      .z = 255.0f
-    },
-  },
-
-  {
-    .type = OMNI,
-    .point = {
       .x = 50.0f,
-      .y = 50.0f, //95
-      .z = 70.0f
+      .y = 50.0f,
+      .z = 100.0f
     },
-    .color = {
-      .x = 255.0f,
-      .y = 255.0f,
-      .z = 255.0f
-    },
-  },
-
+  }
 };
 
-//2, now 5
-Sphere s_spheres[5] = {
+Sphere s_spheres[2] = {
 
   {
     .point =
       {
-        .x = 65.0f,
-        .y = 70.0f,
-        .z = 100.0f
+        .x = 70.0f,
+        .y = 25.0f,
+        .z = 50.0f
         // .z = 75.0f
       },
-    .radius = 8.0f
-  },
-
-  {
-    .point =
-      {
-        .x = 85.0f,
-        .y = 70.0f,
-        .z = 10.0f
-        // .z = 75.0f
-      },
-    .radius = 10.0f
+    .radius = 25.0f
   },
 
   {
     .point =
       {
         .x = 20.0f,
-        .y = 35.0f,
-        .z = 60.0f
-        // .z = 75.0f
-      },
-    .radius = 12.0f
-  },
-
-  {
-    .point =
-      {
-        .x = 30.0f,
-        .y = 15.0f,
+        .y = 10.0f,
         .z = 50.0f
         // .z = 75.0f
       },
-    .radius = 15.0f
-  },
-
-  {
-    .point =
-      {
-        .x = 80.0f,
-        .y = 45.0f,
-        .z = 35.0f
-        // .z = 75.0f
-      },
-    .radius = 9.0f
+    .radius = 10.0f
   },
 
 };
 
-//used to be 10, now 12 with front wall
-Triangle s_triangles[12] = {
+Triangle s_triangles[10] = {
 
   //Back wall
   {
@@ -251,13 +144,13 @@ Triangle s_triangles[12] = {
       {
         .x = 0.0f,
         .y = 0.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point3 =
       {
         .x = 100.0f,
         .y = 0.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       }
   },
 
@@ -266,7 +159,7 @@ Triangle s_triangles[12] = {
       {
         .x = 100.0f,
         .y = 0.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point2 =
       {
@@ -301,7 +194,7 @@ Triangle s_triangles[12] = {
       {
         .x = 100.0f,
         .y = 100.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       }
   },
 
@@ -310,13 +203,13 @@ Triangle s_triangles[12] = {
       {
         .x = 100.0f,
         .y = 100.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point2 =
       {
         .x = 0.0f,
         .y = 100.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point3 =
       {
@@ -345,7 +238,7 @@ Triangle s_triangles[12] = {
       {
         .x = 0.0f,
         .y = 100.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       }
   },
 
@@ -354,13 +247,13 @@ Triangle s_triangles[12] = {
       {
         .x = 0.0f,
         .y = 100.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point2 =
       {
         .x = 0.0f,
         .y = 0.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point3 =
       {
@@ -382,13 +275,13 @@ Triangle s_triangles[12] = {
       {
         .x = 100.0f,
         .y = 0.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point3 =
       {
         .x = 100.0f,
         .y = 100.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       }
   },
 
@@ -397,7 +290,7 @@ Triangle s_triangles[12] = {
       {
         .x = 100.0f,
         .y = 100.0f,
-        .z = 160.0f,
+        .z = 100.0f,
       },
     .point2 =
       {
@@ -410,84 +303,23 @@ Triangle s_triangles[12] = {
         .x = 100.0f,
         .y = 0.0f,
         .z = 0.0f,
-      }
-  },
-
-    //Front wall
-  {
-    .point1 =
-      {
-        .x = 100.0f,
-        .y = 0.0f,
-        .z = 160.0f,
-      },
-    .point2 =
-      {
-        .x = 0.0f,
-        .y = 0.0f,
-        .z = 160.0f,
-      },
-    .point3 =
-      {
-        .x = 0.0f,
-        .y = 100.0f,
-        .z = 160.0f,
-      }
-  },
-
-  {
-    .point3 =
-      {
-        .x = 100.0f,
-        .y = 0.0f,
-        .z = 160.0f,
-      },
-    .point2 =
-      {
-        .x = 100.0f,
-        .y = 100.0f,
-        .z = 160.0f,
-      },
-    .point1 =
-      {
-        .x = 0.0f,
-        .y = 100.0f,
-        .z = 160.0f,
       }
   }
 };
 
-//originally 12 objects, now 14
-Object s_objects[17] = {
+//originally 12 objects
+Object s_objects[12] = {
 
   {
     .type = SPHERE,
-    .matIndex = 1,
+    .matIndex = 2,
     .object = &(s_spheres[0])
   },
 
   {
     .type = SPHERE,
-    .matIndex = 1,
+    .matIndex = 3,
     .object = &(s_spheres[1])
-  },
-
-  {
-    .type = SPHERE,
-    .matIndex = 1,
-    .object = &(s_spheres[2])
-  },
-
-  {
-    .type = SPHERE,
-    .matIndex = 1,
-    .object = &(s_spheres[3])
-  },
-
-  {
-    .type = SPHERE,
-    .matIndex = 1,
-    .object = &(s_spheres[4])
   },
 
   // Back wall
@@ -553,21 +385,7 @@ Object s_objects[17] = {
     .type = TRIANGLE,
     .matIndex = 3,
     .object = &(s_triangles[9])
-  },
-
-  // Front wall
-  {
-    .type = TRIANGLE,
-    .matIndex = 1,
-    .object = &(s_triangles[10])
-  },
-
-  {
-    .type = TRIANGLE,
-    .matIndex = 1,
-    .object = &(s_triangles[11])
   }
-
 };
 
 Material s_materials[6] = {
@@ -669,13 +487,12 @@ Material s_materials[6] = {
   }
 };
 
-//Originally .n_objects = 12, now 14 with extra wall
 Scene s_scene = {
   .camera = &s_camera,
   .materials = s_materials,
   .objects = s_objects,
   .lights = s_lights,
-  .n_lights = 7,
+  .n_lights = 3,
   .n_materials = 6,
-  .n_objects = 17
+  .n_objects = 12
 };

@@ -1,4 +1,9 @@
-One file path tracer.
+Wendy Chen
+CPSC 490 Fall 2016
 
-Currently only compiles if cairo is installed correctly (for creating jpegs.)
-Currently only compilation on OSX set up.
+This is the current unidirectional path tracer I have implemented as part of my study into path tracing theory.
+
+The cairo image library is currently installed on my personal machine (MacOSX), and the code can be compiled with:
+gcc -std=c99 -o main -L/usr/local/lib/cairo/ -lcairo main.c -I/usr/local/include/cairo/
+
+To compile on a different machine, you will need to have cairo correctly installed.
